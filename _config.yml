@@ -23,7 +23,7 @@ github_username:  arthurmco
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-dinky
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
