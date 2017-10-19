@@ -14,8 +14,10 @@ layout: default
 	&#8212; Categories: {% for cat in post.categories %}<em>{{ cat }}, </em>{% endfor %}
 {% endif %}
 </p>
-
 {{ post.excerpt }}
+{% if post.excerpt.size < post.content.size %}	
+	<a href="{{ post.url }}">Read More &raquo</a>
+{% endif %}	
 
 </div>
 {% endfor %}
