@@ -7,10 +7,7 @@ layout: default
 <div class="post-item">
 	<h2><a class="title-link" href="{{ post.url }}">{{ post.title }}</a></h2>
 	<p style="font-size: 0.9em">Created in {{ post.date | date_to_long_string }} &#8212; 
-Categories: 
-{% for cat in post.categories %} 
-	<em>{{ cat }}, </em>
-{% endfor %}
+Categories: {% for cat in post.categories %}<em>{{ cat }}, </em>{% endfor %}
 </p>
 
 {{ post.excerpt }}
