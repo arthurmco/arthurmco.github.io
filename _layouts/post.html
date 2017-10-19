@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article>
+	<h2>{{ page.title }}</h2>
+	<p style="font-size: 0.9em">Created in {{ page.date | date_to_long_string }} &#8212; 
+Categories: 
+{% for cat in page.categories %} 
+	<em>{{ cat }}, </em>
+{% endfor %}
+</p>
+	{{ page.content }}
+</article>
