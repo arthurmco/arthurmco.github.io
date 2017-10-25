@@ -12,17 +12,23 @@ both horizontally and vertically.
 I almost burned my brain cells to do it, tried to use Flexbox without success...  
 Until I found these three magic lines that solved my problem:
 
+<!--more-->
+
 ``` css
 
 element {
 	/* ... */
-	width: 50%;
-	height: 50%;
+	left: 50%;
+	top: 50%;
 	transform: translate(-50%, -50%)
 	/* ... */
 }
 
 ```
+
+Basically, the left and top moves it to the center, and the 
+`transform: translate` line corrects the positioning, since the anchor point
+is the top-left border of the element.
 
 Note that this is relative to the ```position``` attribute, so, if it was
 absolute, this will center it relative to the parent (normally the body), if it
