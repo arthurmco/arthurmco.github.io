@@ -30,6 +30,12 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+  
 # Pagination
 paginate: 10
 

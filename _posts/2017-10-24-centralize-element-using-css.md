@@ -3,7 +3,7 @@ layout: post
 title:  "Centralize elements using CSS"
 date:   2017-10-24 21:44:00 -0200
 categories: webdev
-tags: css, centralize
+tags: css centralize
 ---
 
 These days I had (indirectly) an assignment at work: centralize an element, 
