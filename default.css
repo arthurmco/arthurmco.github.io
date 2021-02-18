@@ -54,7 +54,8 @@ article .things .thing {
     display: block;
     border: 2px solid #eee;
     min-height: 100px;
-    width: 40%;
+    max-width: 90%;
+    width: 400px;
     margin: 0;
     padding: 0;
 }
@@ -110,17 +111,28 @@ footer .links {
         width: 50%;
     }
 
+
     article, footer, header {
         width: 80%;
     }
 }
 
 @media (max-width: 768px) { 
+
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
     article, footer, header {
+        margin: 0;
+        padding: 0;
         width: 100%;
     }
 
     footer .links {
+        margin: 0;
+        padding: 0;
         flex-wrap: wrap;
     }
 
@@ -129,6 +141,7 @@ footer .links {
     }
 
     article .things .thing {
+
         width: 80%;
     }
  }
