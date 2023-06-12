@@ -58,6 +58,7 @@ article .things .thing {
     width: 400px;
     margin: 0;
     padding: 0;
+    margin-left: 1ex;
 }
 
 article .things .thing a.thing-header {
