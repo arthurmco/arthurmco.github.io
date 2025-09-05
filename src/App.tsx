@@ -1,60 +1,15 @@
-import { useState } from 'react'
 import './App.css'
-import { FollowLinkArea } from './components/FollowLinksArea';
 import { HomeLinksArea } from './components/HomeLinksArea';
-
-function Header() {
-    const author = "Arthur Mendes";
-    const birthDate = new Date(1997, 5 - 1, 30);
-
-    const getYearsFromToday = (d: Date) => {
-        const today = new Date();
-
-        const diffSecs = (today.getTime() - d.getTime()) / 1000;
-        return diffSecs / 3600 / 24 / 365;
-    }
-
-    const Breaker = () => {
-        return (
-            <span style={{
-                fontWeight: 200,
-                opacity: 0.75
-            }}>&nbsp;|</span>
-        )
-    }
-
-    const years = getYearsFromToday(birthDate);
-
-    return (
-        <header>
-            <h1 className="author-name">{author}</h1>
-            <div className="author-info">{Math.floor(years)} anos
-                <Breaker /> desenvolvedor e escritor
-            </div>
-            <hr />
-        </header>
-    )
-
-}
-
+import { MainLayout } from './layouts/MainLayout';
 
 function App() {
-
     return (
-        <>
-            <Header />
-            <article>
-                <HomeLinksArea />
-                <section>
-                </section>
-            </article>
-            <footer>
-                  <FollowLinkArea />
-                <div>
-                    made with &hearts; with <strong>vite</strong> and <strong>react</strong>
-                </div>
-            </footer>
-        </>
+        <MainLayout language='pt-br'>
+            <HomeLinksArea />
+            <section>
+                AA
+            </section>
+        </MainLayout>
     )
 }
 

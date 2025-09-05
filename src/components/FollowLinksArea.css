@@ -2,13 +2,13 @@
 
 .follow-links {
     display: flex;
-    font-size: 2.5em;
+    font-size: 3rem;
     width: 50%;
     max-width: 900px;
     justify-content: center;
-    align-items: center;    
+    align-itrems: center;    
     justify-content: space-evenly;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.25rem;
 }
 
 .follow-links a {
@@ -24,11 +24,11 @@
     .follow-links {
         width: 100%;
         left: 0;
-        font-size: 3em;
+        font-size: 3rem;
         overflow-x: scroll;
-        gap: 0.25em;
+        gap: 0.25rem;
 
         border-top: 1px solid var(--fg4);
-        padding-top: 0.25em;
+        padding-top: 0.25rem;
     }
 }

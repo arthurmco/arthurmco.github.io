@@ -35,6 +35,8 @@ a {
     font-weight: 500;
     color: var(--blue-dark);
     text-decoration: inherit;
+
+    
 }
 a:hover {
     color: var(--blue-dark);
@@ -46,11 +48,17 @@ body {
     min-width: 350px;
 
     font-family: Gentium Plus, Gentium, EB Garamond, serif;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 
 }
 
 @media (max-width: 600px) {
+    body {
+        width: 100vw;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1280px) {
     body {
         width: 100vw;
     }
@@ -61,7 +69,7 @@ code {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 4rem;
     line-height: 1.1;
 }
 

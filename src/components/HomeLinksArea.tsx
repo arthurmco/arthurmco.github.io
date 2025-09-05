@@ -1,6 +1,7 @@
 import {
     faLaptop,
-    faPenNib
+    faPenNib,
+    faPlay
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './HomeLinksArea.css';
@@ -28,6 +29,14 @@ export const HomeLinksArea = () => {
             icon: faPenNib,
             description: "Minhas obras de ficção, em diferentes searas da literatura fantástica. " +
                 "Todas disponíveis na Amazon",
+            iconMargin: 0,
+            url: ""
+        },
+        {
+            title: "Aparições na mídia",
+            icon: faPlay,
+            description: "Minhas aparições em eventos e canais pequenos e grandes, " +
+                "tudo em uma playlist no Youtube",
             iconMargin: 0,
             url: ""
         }
