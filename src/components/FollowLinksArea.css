@@ -24,9 +24,9 @@
     .follow-links {
         width: 100%;
         left: 0;
-        font-size: 3rem;
+        font-size: 4rem;
         overflow-x: scroll;
-        gap: 0.25rem;
+        gap: 1rem;
 
         border-top: 1px solid var(--fg4);
         padding-top: 0.25rem;

@@ -55,6 +55,7 @@ body {
 @media (max-width: 600px) {
     body {
         width: 100vw;
+        font-size: 1.4rem;
     }
 }
 
