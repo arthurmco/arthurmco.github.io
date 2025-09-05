@@ -9,6 +9,7 @@ header {
 
 header .author-name {
     margin-bottom: 0.2em;
+    font-weight: bold;
     color: var(--fg0);
 }
 
@@ -36,9 +37,9 @@ article {
 
 footer {
     display: flex;
-    margin-left: 25%;
+    margin-left: 15%;
     margin-top: 3em;
-    width: 50%;
+    width: 70%;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
@@ -66,38 +67,4 @@ footer {
         margin-left: 0;
     }
     
-}
-
-
-/* link area */
-
-.follow-links {
-    display: flex;
-    font-size: 2.5em;
-    width: 40%;
-    max-width: 900px;
-    justify-content: center;
-    align-items: center;    
-    justify-content: space-evenly;
-    margin-bottom: 0.25em;
-    margin-top: -0.25em;
-                  
-}
-
-.follow-links a {
-    color: var(--fg2);
-    transition: 0.3s;
-}
-
-.follow-links a:hover {
-    color: var(--fg4);
-}
-
-@media (max-width: 600px) {
-    .follow-links {
-        width: 100%;
-        left: 0;
-        font-size: 3em;
-        overflow-x: scroll;
-    }
 }

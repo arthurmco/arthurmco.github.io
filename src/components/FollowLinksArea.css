@@ -1,0 +1,34 @@
+/* link area */
+
+.follow-links {
+    display: flex;
+    font-size: 2.5em;
+    width: 50%;
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;    
+    justify-content: space-evenly;
+    margin-bottom: 0.25em;
+}
+
+.follow-links a {
+    color: var(--fg2);
+    transition: 0.3s;
+}
+
+.follow-links a:hover {
+    color: var(--fg4);
+}
+
+@media (max-width: 600px) {
+    .follow-links {
+        width: 100%;
+        left: 0;
+        font-size: 3em;
+        overflow-x: scroll;
+        gap: 0.25em;
+
+        border-top: 1px solid var(--fg4);
+        padding-top: 0.25em;
+    }
+}
