@@ -1,14 +1,15 @@
 
 header {
     display: flex;
-    width: 100vw;
+    width: 100%;
     flex-direction: column;
-    flex-flow: center;
+    justify-content: center;
     align-items: center;
 }
 
 header .author-name {
     margin-bottom: 0.2em;
+    color: var(--fg0);
 }
 
 header .author-info {    
@@ -26,16 +27,77 @@ header hr {
 
 article {
     display: flex;
-    width: 100%;
+    margin-left: 15%;
+    width: 70%;
     flex-direction: column;
-    flex-flow: center;
+    justify-content: center;
     align-items: center;    
 }
 
 footer {
     display: flex;
-    width: 100%;
+    margin-left: 25%;
+    margin-top: 3em;
+    width: 50%;
     flex-direction: column;
-    flex-flow: center;
+    justify-content: center;
     align-items: center;    
+    color: var(--fg4);
+}
+
+
+@media (max-width: 600px) {
+
+    header .author-name {
+        text-align: center;
+    }
+
+    header hr {
+        width: 90%;
+    }
+
+    article {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+}
+
+
+/* link area */
+
+.follow-links {
+    display: flex;
+    font-size: 2.5em;
+    width: 40%;
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;    
+    justify-content: space-evenly;
+    margin-bottom: 0.25em;
+    margin-top: -0.25em;
+                  
+}
+
+.follow-links a {
+    color: var(--fg2);
+    transition: 0.3s;
+}
+
+.follow-links a:hover {
+    color: var(--fg4);
+}
+
+@media (max-width: 600px) {
+    .follow-links {
+        width: 100%;
+        left: 0;
+        font-size: 3em;
+        overflow-x: scroll;
+    }
 }

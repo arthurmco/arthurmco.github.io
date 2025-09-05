@@ -9,6 +9,8 @@
     --bg1: #3c3836;
     --fg2: #d5c4a1;
     --bg2: #504945;
+    --fg4: #7c6f64;
+    --bg4: #a89984;
     --red-dark: #cc241d;
     --red-light: #fb4934;
     --green-dark: #98971a;
@@ -41,9 +43,17 @@ a:hover {
 body {
     margin: 0;
     min-height: 100vh;
+    min-width: 350px;
 
     font-family: Gentium, EB Garamond, serif;
     font-size: 1.5em;
+
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 100vw;
+    }
 }
 
 code {
@@ -83,6 +93,8 @@ button:focus-visible {
         --fg1: #3c3836;
         --bg2: #d5c4a1;
         --fg2: #504945;
+        --fg4: #a89984;
+        --bg4: #7c6f64;
         --red-light: #cc241d;
         --red-dark: #9d0006;
         --green-light: #98971a;
