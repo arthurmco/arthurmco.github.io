@@ -43,9 +43,12 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;    
-    color: var(--fg4);
+    color: var(--bg4);
 }
 
+main {
+    width: 100%;
+}
 
 @media (max-width: 600px) {
 
@@ -67,6 +70,13 @@ footer {
         margin-left: 0;
     }
 }    
+
+
+@media (min-width: 700px) {
+    main {
+        max-width: 52rem;
+    }
+}
 
 @media (min-width: 600px) and (max-width: 1280px) {
 

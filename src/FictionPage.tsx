@@ -20,10 +20,10 @@ function FictionPage() {
                     <ul>
                         <li>Combustível</li>
                         <li>Secretus</li>
-                        <li>Atualização De Software</li>
+                        <li>Atualização de Software</li>
                         <li>Energold</li>
                         <li>Vida Invisível</li>
-                        <li>A Serviço Da Empresa</li>
+                        <li>A Serviço da Empresa</li>
                     </ul>
                 </section>
             </section>

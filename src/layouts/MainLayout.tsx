@@ -1,6 +1,7 @@
-import { type PropsWithChildren } from 'react'
+import { useEffect, type PropsWithChildren } from 'react'
 import { FollowLinkArea } from '../components/FollowLinksArea'
-;import './MainLayout.css'
+    ; import './MainLayout.css'
+import { useLocation } from 'react-router';
 
 function Header() {
     const author = "Arthur Mendes";
@@ -37,14 +38,26 @@ function Header() {
 }
 
 export type MainLayoutProps = {
-  language: string;
-  hideHeader?: boolean;
+    language: string;
+    hideHeader?: boolean;
+}
+
+
+export default function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
 }
 
 export const MainLayout = (props: PropsWithChildren<MainLayoutProps>) => {
     return (
         <>
-          { !props.hideHeader ? <Header /> : <div style={{marginTop: "2rem"}}></div>}
+            {!props.hideHeader ? <Header /> : <div style={{ marginTop: "2rem" }}></div>}
+            <ScrollToTop />
             <article>
                 {props.children}
             </article>

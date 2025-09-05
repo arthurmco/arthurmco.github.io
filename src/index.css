@@ -9,8 +9,9 @@
     --bg1: #3c3836;
     --fg2: #d5c4a1;
     --bg2: #504945;
-    --fg4: #7c6f64;
-    --bg4: #a89984;
+    --fg3: #bdae93;
+    --bg4: #7c6f64;
+    --fg4: #a89984;
     --red-dark: #cc241d;
     --red-light: #fb4934;
     --green-dark: #98971a;
@@ -102,8 +103,9 @@ button:focus-visible {
         --fg1: #3c3836;
         --bg2: #d5c4a1;
         --fg2: #504945;
-        --fg4: #a89984;
-        --bg4: #7c6f64;
+        --fg3: #665c54;
+        --bg4: #a89984;
+        --fg4: #7c6f64;
         --red-light: #cc241d;
         --red-dark: #9d0006;
         --green-light: #98971a;
