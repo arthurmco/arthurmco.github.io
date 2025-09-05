@@ -1,5 +1,6 @@
-import { useState, type PropsWithChildren } from 'react'
-import { FollowLinkArea } from '../components/FollowLinksArea';
+import { type PropsWithChildren } from 'react'
+import { FollowLinkArea } from '../components/FollowLinksArea'
+;import './MainLayout.css'
 
 function Header() {
     const author = "Arthur Mendes";
@@ -36,13 +37,14 @@ function Header() {
 }
 
 export type MainLayoutProps = {
-    language: string;
+  language: string;
+  hideHeader?: boolean;
 }
 
 export const MainLayout = (props: PropsWithChildren<MainLayoutProps>) => {
     return (
         <>
-            <Header />
+          { !props.hideHeader ? <Header /> : <div style={{marginTop: "2rem"}}></div>}
             <article>
                 {props.children}
             </article>

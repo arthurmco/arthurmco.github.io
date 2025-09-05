@@ -1,4 +1,3 @@
-import './App.css'
 import { HomeLinksArea } from './components/HomeLinksArea';
 import { MainLayout } from './layouts/MainLayout';
 

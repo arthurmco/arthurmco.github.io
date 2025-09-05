@@ -30,7 +30,7 @@ export const HomeLinksArea = () => {
             description: "Minhas obras de ficção, em diferentes searas da literatura fantástica. " +
                 "Todas disponíveis na Amazon",
             iconMargin: 0,
-            url: ""
+          url: "/books"
         },
         {
             title: "Aparições na mídia",

@@ -39,7 +39,7 @@ a {
     
 }
 a:hover {
-    color: var(--blue-dark);
+    color: var(--blue-light);
 }
 
 body {
