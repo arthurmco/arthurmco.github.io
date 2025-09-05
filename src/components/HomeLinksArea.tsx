@@ -43,7 +43,7 @@ export const HomeLinksArea = () => {
             description: "Minhas aparições em eventos e canais pequenos e grandes, " +
                 "tudo em uma playlist no Youtube",
             iconMargin: 0,
-            url: ""
+            url: "https://www.youtube.com/playlist?list=PLDGccDa8qEwNqtGTLBGwgQByVtdfUb4TQ"
         }
 
     ]
