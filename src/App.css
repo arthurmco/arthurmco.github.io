@@ -1,0 +1,30 @@
+.pipe-links {
+    font-size: 1.1em;
+    display: flex;
+    gap: 1rem;
+}
+
+.pipe-links span + span::before {
+    content: "|";
+}
+
+.pipe-links a {
+    padding-left: 1rem;
+}
+
+@media (max-width: 600px) {
+.pipe-links {
+    font-size: 1em;
+    flex-direction: column;
+}
+
+
+.pipe-links span + span::before {
+    content: "";
+}
+
+.pipe-links a {
+    padding-left: 0rem;
+}
+
+}

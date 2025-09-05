@@ -5,12 +5,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './HomeLinksArea.css';
+import type { JSX, PropsWithChildren } from 'react';
+import { Link } from 'react-router';
 
 export interface HomeLinkInfo {
     title: string;
     icon: any;
     description: string;
-    url: string;
+    url: string | ((props: PropsWithChildren<{}>) => JSX.Element);
     iconMargin: number;
 }
 
@@ -30,7 +32,10 @@ export const HomeLinksArea = () => {
             description: "Minhas obras de ficção, em diferentes searas da literatura fantástica. " +
                 "Todas disponíveis na Amazon",
             iconMargin: 0,
-          url: "/books"
+            url: (props: PropsWithChildren<{}>) => {
+              return <Link className="link-title"
+                       to="/books">{props.children}</Link>
+            }
         },
         {
             title: "Aparições na mídia",
@@ -53,7 +58,12 @@ export const HomeLinksArea = () => {
                     }}>
                         <FontAwesomeIcon icon={l.icon} />
                     </div>
-                    <a className='link-title' href={l.url}>{l.title}</a>
+                    {
+                        typeof l.url === "string" ? <a className='link-title' href={l.url}>{l.title}</a>
+                            : l.url({
+                                children: <>{l.title}</>
+                            })
+                    }
                     <div className='link-description'>{l.description}</div>
                 </div>
             )))}
