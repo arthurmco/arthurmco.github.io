@@ -1,0 +1,41 @@
+
+header {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    flex-flow: center;
+    align-items: center;
+}
+
+header .author-name {
+    margin-bottom: 0.2em;
+}
+
+header .author-info {    
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+header hr {
+    border: 1px solid var(--fg1);
+    opacity: 0.2;
+    width: 50%;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+}
+
+article {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-flow: center;
+    align-items: center;    
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-flow: center;
+    align-items: center;    
+}
