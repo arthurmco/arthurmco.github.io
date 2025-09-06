@@ -9,6 +9,7 @@ import FAQPage from './FAQPage.tsx';
 import SetupPage from './SetupPage.tsx';
 import AboutPage from './AboutPage.tsx';
 import MicrostoryListPage from './MicrostoryListPage.tsx';
+import MicrostoryPage from './MicrostoryPage.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode> 
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/setup" element={<SetupPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/microstories" element={<MicrostoryListPage />} />
+        <Route path="/microstory/:storyName" element={<MicrostoryPage />} />
       </Routes>
     </HashRouter>
   </StrictMode>,
