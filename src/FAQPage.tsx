@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { MainLayout } from './layouts/MainLayout';
-import type { PropsWithChildren } from 'react';
+import { useState, type PropsWithChildren } from 'react';
 import './FAQPage.css'
 
 export interface QuestionBlockProps {
@@ -8,12 +8,23 @@ export interface QuestionBlockProps {
 }
 
 const QuestionBlock = (props: PropsWithChildren<QuestionBlockProps>) => {
+    const [isExpanded, setExpanded] = useState(false)
+
+  const expandedIcon = isExpanded ? <code>&#x25BC;</code> : <code>&#x25BA;</code>
+  const controlID = props.title.substring(0, 32).toLowerCase().replace(/\s+/g, "-")
+  const answerElementID = `answer-${controlID}`
+  
     return (
-        <div className="question" style={{ marginBottom: "1rem" }}>
-            <div className="title">{props.title}</div>
-            <div className='answer' style={{ color: "var(--fg4)", textAlign: "justify" }}>
+        <div className="question">
+          <a className="title" aria-expanded={isExpanded} href="#"
+            aria-controls={answerElementID}
+            onClick={e => {
+            e.preventDefault();
+            setExpanded(!isExpanded);
+          }} >{expandedIcon} {props.title}</a>
+          {isExpanded && <div className='answer' id={answerElementID}>
                 {props.children}
-            </div>
+            </div>}
         </div>
     )
 }
@@ -26,8 +37,8 @@ function FAQPage() {
                 <Link to="/">Voltar</Link>
             </section>
             <main lang="pt-BR">
-              <h2>Perguntas frequentes</h2>
-              <small>(não sou famoso, mas já me perguntaram algumas coisas)</small>
+                <h2>Perguntas frequentes</h2>
+                <small>(não sou famoso, mas já me perguntaram algumas coisas)</small>
                 <hr />
                 <h3>Tecnologia</h3>
                 <QuestionBlock title="Por que você mudou o site?">
@@ -62,25 +73,25 @@ function FAQPage() {
                     <p>E não é por desumildade. Eu tive tempo de planejar, e não sofro pressão de nenhuma grande empresa pra publicar minhas obras. Por causa disso, elas saem mais bem-feitas, e com bem menos inconsistências.</p>
                 </QuestionBlock>
                 <QuestionBlock title="O que você acha de livros escritos com inteligência artificial?">
-                  <p>Se você me conhece, certamente já sabe.</p>
-                  <p>Se não, aqui vai uma versão educada e polida da resposta.</p>
-                  <p>Acredito que escrita seja uma arte, e que a arte é uma expressão individual do artista. Por pior que possa ser, cada artista tem um estilo, uma voz, uma personalidade única (porque as pessoas possuem vivências únicas), e a arte produzida por esses artistas também se torna única.</p>
-                  <p>A IA, mais especificamente os LLMs, como ChatGPT, Grok, MetaAI e afins, &ldquo;criam&rdquo; coisas diretamente baseadas em materiais pré-existentes, sem adicionar aquela personalidade do autor. Como resultado, sua obra se torna genérica, sem personalidade, e até uma parede mal rebocada tem mais personalidade que tal texto</p>
-                  <p>Fora isso, o uso de IA pra esse fim demonstra uma falta de respeito com a arte, e até mesmo com os artistas reais. Muitos artistas (e eu nem estou falando só de escrita) dependem de seus trabalhos para viverem. Se todos começarem a usar IA, com o tempo, os artistas se sentirão desmotivados e pararão de produzir, ou passarão fome e não terão como sustentar suas famílias. Como consequência, o mundo ficará cada vez mais genérico, mais afundado no desemprego e na pobreza, e com a inteligência artificial se retroalimentando para produzir coisas que são cada vez mais do mesmo.</p>
-                  <p>Se eu usaria IA pra escrever um livro? Prefiro cortar meus braços e nunca mais escrever nada na vida.</p>
+                    <p>Se você me conhece, certamente já sabe.</p>
+                    <p>Se não, aqui vai uma versão educada e polida da resposta.</p>
+                    <p>Acredito que escrita seja uma arte, e que a arte é uma expressão individual do artista. Por pior que possa ser, cada artista tem um estilo, uma voz, uma personalidade única (porque as pessoas possuem vivências únicas), e a arte produzida por esses artistas também se torna única.</p>
+                    <p>A IA, mais especificamente os LLMs, como ChatGPT, Grok, MetaAI e afins, &ldquo;criam&rdquo; coisas diretamente baseadas em materiais pré-existentes, sem adicionar aquela personalidade do autor. Como resultado, sua obra se torna genérica, sem personalidade, e até uma parede mal rebocada tem mais personalidade que tal texto</p>
+                    <p>Fora isso, o uso de IA pra esse fim demonstra uma falta de respeito com a arte, e até mesmo com os artistas reais. Muitos artistas (e eu nem estou falando só de escrita) dependem de seus trabalhos para viverem. Se todos começarem a usar IA, com o tempo, os artistas se sentirão desmotivados e pararão de produzir, ou passarão fome e não terão como sustentar suas famílias. Como consequência, o mundo ficará cada vez mais genérico, mais afundado no desemprego e na pobreza, e com a inteligência artificial se retroalimentando para produzir coisas que são cada vez mais do mesmo.</p>
+                    <p>Se eu usaria IA pra escrever um livro? Prefiro cortar meus braços e nunca mais escrever nada na vida.</p>
                 </QuestionBlock>
-              <QuestionBlock title="Então você é contra inteligência artificial, né?">
-                <p>Não.</p>
-                <p>Eu inclusive uso como etapa inicial de pesquisa, e já até treinei alguns modelos usando GPT-2 no meu computador.</p>
-                <p>Eu só sou contra IA pra produzir <em>arte</em> (e código, mas só pra coisas que não sejam boilerplate).</p>
+                <QuestionBlock title="Então você é contra inteligência artificial, né?">
+                    <p>Não.</p>
+                    <p>Eu inclusive uso como etapa inicial de pesquisa, e já até treinei alguns modelos usando GPT-2 no meu computador.</p>
+                    <p>Eu só sou contra IA pra produzir <em>arte</em> (e código, mas só pra coisas que não sejam boilerplate).</p>
                 </QuestionBlock>
 
-              <hr />
-              <h3>Outros</h3>
-                <QuestionBlock title="As letras são muito grandes!">
-                  <p>Eu tenho três graus de astigmatismo.</p>
-                  <p>O site é feito pra ser acessível pra quem não enxerga direito igual eu.</p>
-                  <p>Se você se sentir <em>realmente</em> incomodado/a/e, você pode diminuir o zoom.</p>
+                <hr />
+                <h3>Outros</h3>
+                <QuestionBlock title="Cadê as suas outras redes sociais?">
+                  <p>As que eu deixei no site são as que eu mais uso e que são públicas</p>
+                  <p>Eu tenho Instagram, eu tenho WhatsApp, mas eles são privados, até pra evitar o acesso de bots a essas redes. </p>
+                  <p>Foi exatamente por causa desses bots, por exemplo, que eu tirei o Telegram do site.</p>
                 </QuestionBlock>
             </main>
         </MainLayout>
