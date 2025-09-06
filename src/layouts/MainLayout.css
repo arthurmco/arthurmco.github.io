@@ -46,6 +46,11 @@ footer {
     color: var(--bg4);
 }
 
+footer a {
+    color: var(--bg4);
+    text-decoration: underline dotted;
+}
+
 main {
     width: 100%;
 }

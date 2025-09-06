@@ -64,7 +64,10 @@ export const MainLayout = (props: PropsWithChildren<MainLayoutProps>) => {
             <footer>
                 <FollowLinkArea />
                 <div>
-                    made with &hearts; with <strong>vite</strong> and <strong>react</strong>
+                       made with &hearts; with <strong>vite</strong> and <strong>react</strong>
+                </div>
+              <div>
+                  <a href="https://github.com/arthurmco/arthurmco.github.io">source</a>
                 </div>
             </footer>
         </>
