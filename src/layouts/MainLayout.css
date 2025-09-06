@@ -48,12 +48,16 @@ footer {
 
 footer a {
     color: var(--bg4);
-    text-decoration: underline dotted;
 }
 
 main {
     width: 100%;
     hyphens: auto;
+    font-size: 0.95em;
+}
+
+main h1, main h2, main h3 {
+    color: var(--fg1);
 }
 
 @media (max-width: 600px) {
