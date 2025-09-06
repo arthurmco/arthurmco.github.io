@@ -4,6 +4,13 @@
     margin-top: 0;
 }
 
-.answer {
+.question .answer {
     text-indent: 1rem;
 }
+
+.question .title {
+    font-weight: 500;
+    text-shadow : 0 0 0 var(--fg4); /* fake semibold-ish for unsopported fonts */
+    color: var(--fg2)
+}
+

@@ -10,7 +10,7 @@ export interface QuestionBlockProps {
 const QuestionBlock = (props: PropsWithChildren<QuestionBlockProps>) => {
     return (
         <div className="question" style={{ marginBottom: "1rem" }}>
-            <div className="title" style={{ fontWeight: "500", color: "var(--fg2)" }}>{props.title}</div>
+            <div className="title">{props.title}</div>
             <div className='answer' style={{ color: "var(--fg4)", textAlign: "justify" }}>
                 {props.children}
             </div>
