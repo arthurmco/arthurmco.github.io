@@ -26,7 +26,8 @@ function FAQPage() {
                 <Link to="/">Voltar</Link>
             </section>
             <main>
-                <h2>Perguntas frequentes</h2>
+              <h2>Perguntas frequentes</h2>
+              <small>(não sou famoso, mas já me perguntaram algumas coisas)</small>
                 <hr />
                 <h3>Tecnologia</h3>
                 <QuestionBlock title="Por que você mudou o site?">
@@ -60,6 +61,20 @@ function FAQPage() {
                     <p>Não. Provavelmente é melhor.</p>
                     <p>E não é por desumildade. Eu tive tempo de planejar, e não sofro pressão de nenhuma grande empresa pra publicar minhas obras. Por causa disso, elas saem mais bem-feitas, e com bem menos inconsistências.</p>
                 </QuestionBlock>
+                <QuestionBlock title="O que você acha de livros escritos com inteligência artificial?">
+                  <p>Se você me conhece, certamente já sabe.</p>
+                  <p>Se não, aqui vai uma versão educada e polida da resposta.</p>
+                  <p>Acredito que escrita seja uma arte, e que a arte é uma expressão individual do artista. Por pior que possa ser, cada artista tem um estilo, uma voz, uma personalidade única (porque as pessoas possuem vivências únicas), e a arte produzida por esses artistas também se torna única.</p>
+                  <p>A IA, mais especificamente os LLMs, como ChatGPT, Grok, MetaAI e afins, &ldquo;criam&rdquo; coisas diretamente baseadas em materiais pré-existentes, sem adicionar aquela personalidade do autor. Como resultado, sua obra se torna genérica, sem personalidade, e até uma parede mal rebocada tem mais personalidade que tal texto</p>
+                  <p>Fora isso, o uso de IA pra esse fim demonstra uma falta de respeito com a arte, e até mesmo com os artistas reais. Muitos artistas (e eu nem estou falando só de escrita) dependem de seus trabalhos para viverem. Se todos começarem a usar IA, com o tempo, os artistas se sentirão desmotivados e pararão de produzir, ou passarão fome e não terão como sustentar suas famílias. Como consequência, o mundo ficará cada vez mais genérico, mais afundado no desemprego e na pobreza, e com a inteligência artificial se retroalimentando para produzir coisas que são cada vez mais do mesmo.</p>
+                  <p>Se eu usaria IA pra escrever um livro? Prefiro cortar meus braços e nunca mais escrever nada na vida.</p>
+                </QuestionBlock>
+              <QuestionBlock title="Então você é contra inteligência artificial, né?">
+                <p>Não.</p>
+                <p>Eu inclusive uso como etapa inicial de pesquisa, e já até treinei alguns modelos usando GPT-2 no meu computador.</p>
+                <p>Eu só sou contra IA pra produzir <em>arte</em> (e código, mas só pra coisas que não sejam boilerplate).</p>
+                </QuestionBlock>
+
               <hr />
               <h3>Outros</h3>
                 <QuestionBlock title="As letras são muito grandes!">
