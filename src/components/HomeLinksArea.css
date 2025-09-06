@@ -112,11 +112,15 @@ a.link-title:hover {
 
 }
 
-@media (min-width: 2080px) {
+@media (min-width: 2280px) {
+    .home-links {
+        gap: 1rem;
+    }
+    
     .home-links .home-link {
         width: 30%;
         max-height: 12rem;        
-    }
+    }    
 }
 
 
