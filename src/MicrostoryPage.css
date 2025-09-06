@@ -1,7 +1,10 @@
 
 main.story {
-    text-indent: 2rem;
     text-align: justify;
+}
+
+main.story>p {
+    text-indent: 2rem;
 }
 
 main.story p {
@@ -22,23 +25,23 @@ main.story h2 {
 main .story-summary {
     color: var(--fg3);
     display: flex;
+    gap: 0em;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0.2rem;
 }
 
 
-.story-summary p {
+main.story-summary p {
     text-indent: 0rem;
     display: inline;
     margin: 0;
     padding: 0;
     text-align: center;
-    padding-left: 1rem;
 }
 
-.story-summary p + p::before {
+main .story-summary p + p::before {
+    padding-left: 1rem;
     content: "♦";
     padding-right: 1rem;
 }
