@@ -53,6 +53,7 @@ footer a {
 
 main {
     width: 100%;
+    hyphens: auto;
 }
 
 @media (max-width: 600px) {

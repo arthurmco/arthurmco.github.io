@@ -25,7 +25,7 @@ function FAQPage() {
             <section>
                 <Link to="/">Voltar</Link>
             </section>
-            <main>
+            <main lang="pt-BR">
               <h2>Perguntas frequentes</h2>
               <small>(não sou famoso, mas já me perguntaram algumas coisas)</small>
                 <hr />
@@ -42,7 +42,7 @@ function FAQPage() {
 
                 <QuestionBlock title="Parou com o blog?">
                     <p>Ele está em hiato.</p>
-                    <p>Perdão pelo palavrão, mas é foda ter motivação pra escrever conteúdo técnico quando as pessoas preferem ficar brigando se faculdade ou não é necessário, se framework X é melhor que Y, ou qual é a treta inútil da semana na &ldquo;bolha dev&rdquo;</p>
+                    <p>Perdão pelo palavrão, mas é foda ter motivação pra escrever conteúdo técnico quando as pessoas preferem ficar brigando se faculdade é ou não é necessário, se framework X é melhor que Y, ou qual é a treta inútil da semana na &ldquo;bolha dev&rdquo;</p>
                     <p>Pelo menos as minhas histórias de ficção são melhor apreciadas.</p>
                     <p>Dito isso, pretendo voltar algum dia. Tanto é que ele ainda está no ar.</p>
                 </QuestionBlock>
