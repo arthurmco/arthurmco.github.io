@@ -41,9 +41,10 @@ main.story-summary p {
 }
 
 main .story-summary p + p::before {
-    padding-left: 1rem;
-    content: "♦";
-    padding-right: 1rem;
+    padding-left: 0.9rem;
+    content: "◆";
+    font-family: monospace;
+    padding-right: 0.9rem;
 }
 
 
@@ -54,8 +55,10 @@ main .story-summary p + p::before {
     }
 
 
-    .story-summary p + p::before {
+    main .story-summary p + p::before {
+        padding-left: 0;
         content: "";
+        padding-right: 0;
     }
 }
 
