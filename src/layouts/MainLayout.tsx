@@ -67,7 +67,8 @@ export const MainLayout = (props: PropsWithChildren<MainLayoutProps>) => {
                        made with &hearts; with <strong>vite</strong> and <strong>react</strong>
                 </div>
               <div>
-                  <a href="https://github.com/arthurmco/arthurmco.github.io">source</a>
+                <a target="_blank"
+                  href="https://github.com/arthurmco/arthurmco.github.io">source</a>
                 </div>
             </footer>
         </>

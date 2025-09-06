@@ -47,9 +47,20 @@ function FAQPage() {
                     <p>Esse site, além de seguir um dos <a href="https://github.com/morhetz/gruvbox/blob/master/README.md">meus esquemas de cor preferidos</a>, tem um layout mais organizado, e uma sensação maior de velocidade.</p>
                 </QuestionBlock>
 
-                <QuestionBlock title="O que você usou pra fazer esse site?">
-                    <p>Usei <code>react</code> e <code>vite</code>, e <code>react-router</code> para as rotas. Eu queria ter usado o <code>create-react-app</code>, mas ele foi depreciado.</p><p> O site está hospedado no Github Pages.</p>
+                <QuestionBlock title="Como você fez esse site?">
+                  <p>Usei <code>react</code> e <code>vite</code>, e <code>react-router</code> para as rotas. Eu queria ter usado o <code>create-react-app</code>, mas ele foi depreciado.</p>
+                  <p>A paleta de cores é a mesma paleta do <code>gruvbox</code>.</p>
+                  <p> O site está hospedado no Github Pages. Você pode ver o código fonte
+                       dele <a target="_blank"
+                              href="https://github.com/arthurmco/arthurmco.github.io">aqui</a>.
+                  </p>
                 </QuestionBlock>
+
+              <QuestionBlock title="Where's the English?">
+                <p>Almost everyone who access this site are speakers of Portuguese or have enough knowledge of the language to be able to read it. Only a minority does not speak it.</p>
+                <p>That being said, if there is enough demand, I will translate every word of this site (including the short stories) into English. Just let me know so I can be aware of the growing demand.</p>
+                <p>Until then, you can use the automatic translation.</p>
+              </QuestionBlock>
 
                 <QuestionBlock title="Parou com o blog?">
                     <p>Ele está em hiato.</p>
@@ -61,11 +72,11 @@ function FAQPage() {
                 <h3>Literatura</h3>
                 <QuestionBlock title="O que você escreve?">
                     <p>Majoritariamente ficção científica <i>hard</i>.
-                        Isso significa que a maior parte das tecnologias apresentadas é, em teoria, possível de existir.</p>
+                        Isso significa que a maior parte das tecnologias apresentadas nas minhas obras é, em teoria, possível de existir.</p>
                     <p>Também escrevi um conto de terror (<em>Secretus</em>), e logo lançarei obras de alta e baixa fantasia</p>
                 </QuestionBlock>
                 <QuestionBlock title="Qual é a ordem pra ler as suas histórias?">
-                    <p>Por enquanto, não há muitas, eu publiquei menos de dez histórias. Leia na ordem que você preferir.</p>
+                    <p>Por enquanto não há muitas, eu publiquei menos de dez histórias. Leia na ordem que você preferir.</p>
                     <p>Lembrando que <em>Secretus</em> não faz parte do mesmo universo compartilhado que as outras obras.</p>
                 </QuestionBlock>
                 <QuestionBlock title="Universo literário? Então é tipo um <alguma coisa>CU?">
