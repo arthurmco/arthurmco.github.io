@@ -10,7 +10,10 @@ import './MicrostoryPage.css'
 
 const storyFiles: Record<string, string[]> = _storyFiles;
 import storyList from './stories/stories.json'
-import type { StoryInfo } from './components/MicroStory';
+import {
+  parseStoryInfo,
+  StorySummary,
+  type RawStoryInfo} from './components/MicroStory';
 
 import remarkFlexibleContainers from 'remark-flexible-containers'
 
@@ -37,13 +40,14 @@ function MicrostoryPage() {
 
     try {
         const data = retrieveStory(storyName || "")
-        const story = (storyList as Record<string, StoryInfo>)[storyName || ""];
+        const story = (storyList as Record<string, RawStoryInfo>)[storyName || ""];
 
         return (
             <MainLayout hideHeader={true} language='pt-br'>
                 {returnSection}
                 <main className="story">
                     <h1>{story.name}</h1>
+                    <StorySummary item={parseStoryInfo(story)} />
                     <Markdown remarkPlugins={[remarkFlexibleContainers]}>
                         {data}
                     </Markdown>
