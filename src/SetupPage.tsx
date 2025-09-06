@@ -11,12 +11,12 @@ function SetupPage() {
                 <h2>Configuração</h2>
                 <hr />
                 <section>
-                    <h3>PC padrão</h3>
+                    <h3>Desktop</h3>
                     <ul>
-                        <li>AMD Ryzen 3950X</li>
+                        <li>AMD Ryzen 3800X</li>
                         <li>48 GB de RAM</li>
-                        <li>SSD de 250 GB (<small>Windows 11</small>)</li>
-                        <li>SSD NVMe de 500 GB (<small>Linux, NixOS</small>)</li>
+                        <li>SSD SATA de 250 GB (<small>Windows 11</small>)</li>
+                        <li>SSD NVMe de 500 GB (<small>Linux, NixOS 24.05</small>)</li>
                         <li>HD de 1TB (<small>compartilhado</small>)</li>
                         <li>NVIDIA Geforce RTX 2070 SUPER</li>
                     </ul>
