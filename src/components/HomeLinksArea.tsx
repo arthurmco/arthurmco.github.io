@@ -1,4 +1,5 @@
 import {
+    faBook,
     faLaptop,
     faPenNib,
     faPlay
@@ -28,13 +29,23 @@ export const HomeLinksArea = () => {
         },
         {
             title: "Livros de ficção",
-            icon: faPenNib,
+            icon: faBook,
             description: "Minhas obras de ficção, em diferentes searas da literatura fantástica. " +
                 "Todas disponíveis na Amazon",
             iconMargin: 0,
             url: (props: PropsWithChildren<{}>) => {
               return <Link className="link-title"
                        to="/books">{props.children}</Link>
+            }
+        },
+        {
+            title: "Microcontos",
+            icon: faPenNib,
+            description: "Histórias curtas que eu resolvi deixar disponíveis gratuitamente",
+            iconMargin: 0,
+            url: (props: PropsWithChildren<{}>) => {
+              return <Link className="link-title"
+                       to="/microstories">{props.children}</Link>
             }
         },
         {

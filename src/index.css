@@ -35,9 +35,8 @@
 a {
     font-weight: 500;
     color: var(--blue-dark);
-    text-decoration: inherit;
-
-    
+    text-decoration: underline dotted;
+    -webkit-text-decoration: underline dotted;    
 }
 a:hover {
     color: var(--blue-light);

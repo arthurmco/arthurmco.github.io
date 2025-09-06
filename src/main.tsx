@@ -8,6 +8,7 @@ import FictionPage from './FictionPage.tsx';
 import FAQPage from './FAQPage.tsx';
 import SetupPage from './SetupPage.tsx';
 import AboutPage from './AboutPage.tsx';
+import MicrostoryListPage from './MicrostoryListPage.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode> 
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/setup" element={<SetupPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/microstories" element={<MicrostoryListPage />} />
       </Routes>
     </HashRouter>
   </StrictMode>,
