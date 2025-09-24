@@ -1,5 +1,20 @@
 import { Link } from 'react-router';
 import { MainLayout } from './layouts/MainLayout';
+import {
+    BookDisplay,
+    parseBook,
+    ShortStoryDisplay,
+  type BookRaw,
+  type ShortStory
+} from './components/BookList'
+
+import rawBookData from './books.json'
+import './FictionPage.css'
+
+const bookData = rawBookData as {
+  books: BookRaw[],
+  stories: ShortStory[]
+}
 
 function FictionPage() {
     return (
@@ -7,26 +22,16 @@ function FictionPage() {
             <section>
                 <Link to="/">Voltar</Link>
             </section>
-            <section>
-              <section>
-                <h2>Meus livros</h2>
-                    <ul>
-                        <li>Crush Digital</li>
-                        <li>Refúgio</li>
-                    </ul>
-                </section>
-              <section>
+            <article>
+              <section className='story-block' id="short-story-block">
                 <h2>Meus contos</h2>
-                    <ul>
-                        <li>Combustível</li>
-                        <li>Secretus</li>
-                        <li>Atualização de Software</li>
-                        <li>Energold</li>
-                        <li>Vida Invisível</li>
-                        <li>A Serviço da Empresa</li>
-                    </ul>
+                <ShortStoryDisplay items={bookData.stories} />
+              </section>
+              <section className='story-block' id="book-block">
+                <h2>Meus livros</h2>
+                <BookDisplay items={bookData.books.map(parseBook)} />
                 </section>
-            </section>
+            </article>
         </MainLayout>
     )
 }

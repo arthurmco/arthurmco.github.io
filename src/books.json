@@ -1,0 +1,56 @@
+{
+  "books": [
+    {
+      "name": "Crush Digital",
+      "date": "2023-01-14T15:00:00.000Z",
+      "url": "https://www.amazon.com.br/dp/B0BSC8MKN2"
+    },
+    {
+      "name": "Refúgio",
+      "date": "2023-06-10T15:00:00.000Z",
+      "url": "https://www.amazon.com.br/dp/B0C7MSLHNX"
+    }
+  ],
+  "stories": [
+    {
+      "name": "Combustível",
+      "source": "RLF Vol. 5",
+      "url": "https://www.amazon.com.br/gp/product/B0CHK4W4NF"
+    },
+    {
+      "name": "Secretus",
+      "source": "RLF Vol. 5",
+      "url": "https://www.amazon.com.br/gp/product/B0CHK4W4NF"
+    },
+    {
+      "name": "Atualização de Software",
+      "source": "RLF Vol. 8",
+      "url": "https://www.amazon.com.br/gp/product/B0CNDBSCWG"
+    },
+    {
+      "name": "Última Cópia",
+      "source": "RLF Especial 1",
+      "url": "https://www.amazon.com.br/dp/B0D3FJ7RGH"
+    },
+    {
+      "name": "Timing Perfeito",
+      "source": "COF V1",
+      "url": "https://www.amazon.com.br/dp/B0D9WLKF5P"
+    },
+    {
+      "name": "Energold",
+      "source": "RLF Vol. 13",
+      "url": "https://www.amazon.com.br/gp/product/B0CW1GLWPG"
+    },
+    {
+      "name": "Vida Invisível",
+      "source": "RLF Vol. 20",
+      "url": "https://www.amazon.com.br/gp/product/B0DHYF16FP"
+    },
+    {
+      "name": "A Serviço da Empresa",
+      "source": "RLF Vol. 25",
+      "url": "https://www.amazon.com.br/gp/product/B0F3W57N9P"
+    }
+  ]
+}

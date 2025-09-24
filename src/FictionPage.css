@@ -1,0 +1,44 @@
+.story-block {
+    width: 100%;
+}
+
+ul.story-display {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: "\2014";
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.story-display li {
+    padding: 0.2em;
+    margin: 0;
+    margin-right: 0.5rem;
+    width: 100%;
+    max-height: 5rem;
+}
+
+
+@media (min-width: 700px) {
+    .story-display li {
+        width: 45%;
+    }
+}
+
+
+#short-story-block .story-display li>a {
+    color: var(--red-light);
+}
+
+#short-story-block .story-display li>a:hover {
+    color: var(--red-dark);
+}
+
+#book-block .story-display li>a {
+    color: var(--green-light);
+}
+
+#book-block .story-display li>a:hover {
+    color: var(--green-dark);
+}
