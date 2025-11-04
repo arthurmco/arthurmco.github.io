@@ -27,7 +27,8 @@ export const parseBook = (br: BookRaw): Book => {
 
 const transformSourceName = (s: string): string => {
     return s.replace("RLF", "Revista Literatura Fantástica")
-        .replace("COF", "CyberOpera Fantástica");
+        .replace("COF", "CyberOpera Fantástica")
+        .replace("BF", "Barbárie Fantástica");
 }
 
 export const ShortStoryDisplay = (props: { items: ShortStory[] }) => {
