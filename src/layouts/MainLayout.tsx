@@ -5,7 +5,7 @@ import { useLocation } from 'react-router';
 
 function Header() {
     const author = "Arthur Mendes";
-    const birthDate = new Date(1997, 5 - 1, 30);
+    const birthDate = new Date("1997-05-30T10:00:00-03:00");
 
     const getYearsFromToday = (d: Date) => {
         const today = new Date();
