@@ -1,7 +1,8 @@
 
 export interface ShortStory {
     name: string;
-    source: string;
+  source: string;
+  comment?: string;
     url: string;
 }
 
@@ -40,6 +41,9 @@ export const ShortStoryDisplay = (props: { items: ShortStory[] }) => {
             return <li key={key}>
                 <a target="_blank" href={s.url}>{s.name}</a><br />
                      <small>Disponível na {fullSource}</small>
+                     {s.comment && <><br/>
+                                     <small className="story-comment">({s.comment})</small>
+                                   </>}
             </li>
         })}
     </ul>
