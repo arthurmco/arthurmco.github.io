@@ -62,6 +62,16 @@
       "name": "Vagantes: Backup Interestelar",
       "source": "COF V2",
       "url": "https://www.amazon.com.br/dp/B0GLHNX25T/"
+    },
+    {
+      "name": "Operação Arriscada",
+      "source": "RLF Vol. 32",
+      "url": "https://www.amazon.com.br/dp/B0GSHFQ1MN/",
+      "internal_time": {
+        "universe": "main",
+        "year": 2447,
+        "month": 6
+      }
     }
   ]
 }
