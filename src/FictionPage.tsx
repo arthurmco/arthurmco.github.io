@@ -4,9 +4,12 @@ import {
     BookDisplay,
     parseBook,
     ShortStoryDisplay,
+} from './components/BookList'
+
+import {
   type BookRaw,
   type ShortStory
-} from './components/BookList'
+} from './model/Book.ts'
 
 import rawBookData from './books.json'
 import './FictionPage.css'

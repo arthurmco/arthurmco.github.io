@@ -1,22 +1,8 @@
-
-export interface ShortStory {
-    name: string;
-  source: string;
-  comment?: string;
-    url: string;
-}
-
-export interface BookRaw {
-    name: string;
-    date: string;
-    url: string;
-}
-
-export type Book = {
-    name: string;
-    launchDate: Date;
-    url: URL
-}
+import {
+    type BookRaw,
+    type ShortStory,
+    type Book
+} from '../model/Book.ts'
 
 export const parseBook = (br: BookRaw): Book => {
     return {
@@ -40,10 +26,10 @@ export const ShortStoryDisplay = (props: { items: ShortStory[] }) => {
 
             return <li key={key}>
                 <a target="_blank" href={s.url}>{s.name}</a><br />
-                     <small>Disponível na {fullSource}</small>
-                     {s.comment && <><br/>
-                                     <small className="story-comment">({s.comment})</small>
-                                   </>}
+                <small>Disponível na {fullSource}</small>
+                {s.comment && <><br />
+                    <small className="story-comment">({s.comment})</small>
+                </>}
             </li>
         })}
     </ul>
@@ -57,11 +43,11 @@ export const BookDisplay = (props: { items: Book[] }) => {
 
             return <li key={key}>
                 <a target="_blank" href={s.url.toString()}>{s.name}</a><br />
-                     <small>Lançado em {s.launchDate.toLocaleDateString("pt-BR", {
-                       year: "numeric",
-                       month: "long",
-                       day: "2-digit"
-                     })}</small>
+                <small>Lançado em {s.launchDate.toLocaleDateString("pt-BR", {
+                    year: "numeric",
+                    month: "long",
+                    day: "2-digit"
+                })}</small>
             </li>
         })}
     </ul>
