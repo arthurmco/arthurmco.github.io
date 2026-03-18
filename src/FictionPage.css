@@ -29,7 +29,13 @@ ul.story-display {
 
 @media (min-width: 700px) {
     .story-display li {
-        width: 45%;
+        max-width: 45%;
+    }
+}
+
+@media (min-width: 2500px) {
+    .story-display li {
+        max-width: 30%;
     }
 }
 

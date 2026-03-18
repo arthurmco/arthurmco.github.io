@@ -26,10 +26,10 @@ header hr {
     margin-bottom: 1rem;
 }
 
-article {
+#root>article {
     display: flex;
-    margin-left: 15%;
-    width: 70%;
+    margin-left: 18%;
+    width: 64%;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
@@ -37,9 +37,9 @@ article {
 
 footer {
     display: flex;
-    margin-left: 15%;
+    margin-left: 18%;
     margin-top: 3rem;
-    width: 70%;
+    width: 64%;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
@@ -70,7 +70,7 @@ main h1, main h2, main h3 {
         width: 90%;
     }
 
-    article {
+    #root>article {
         width: 95%;
         margin-left: 2.5%;
     }
@@ -98,7 +98,7 @@ main h1, main h2, main h3 {
         width: 90%;
     }
 
-    article {
+    #root>article {
         width: 95%;
         margin-left: 2.5%;
     }
@@ -111,4 +111,3 @@ main h1, main h2, main h3 {
         width: 100vw;
     }
 }
-
