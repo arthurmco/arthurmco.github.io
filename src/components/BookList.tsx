@@ -1,16 +1,4 @@
-import {
-    type BookRaw,
-    type ShortStory,
-    type Book
-} from '../model/Book.ts'
-
-export const parseBook = (br: BookRaw): Book => {
-    return {
-        name: br.name,
-        launchDate: new Date(br.date),
-        url: new URL(br.url)
-    }
-}
+import type { Story } from '../model/Story';
 
 const transformSourceName = (s: string): string => {
     return s.replace("RLF", "Revista Literatura Fantástica")
@@ -18,37 +6,42 @@ const transformSourceName = (s: string): string => {
         .replace("BF", "Barbárie Fantástica");
 }
 
-export const ShortStoryDisplay = (props: { items: ShortStory[] }) => {
-    return <ul className="story-display">
-        {props.items.map(s => {
-            const key = s.name.toLowerCase().replace(" ", "");
-            const fullSource = transformSourceName(s.source)
 
-            return <li key={key}>
-                <a target="_blank" href={s.url}>{s.name}</a><br />
-                <small>Disponível na {fullSource}</small>
-                {s.comment && <><br />
-                    <small className="story-comment">({s.comment})</small>
-                </>}
-            </li>
-        })}
-    </ul>
+export const StoryDisplay = (props: { item: Story}) => {
+  const story = props.item;
+  
+  const link = <><a target="_blank" href={story.url.toString()}>{story.name}</a><br /></>;  
+  const linkClass = "story-tag-" + story.info.type;
+  
+  if (story.info.type === "shortstory") {
+    const fullSource = transformSourceName(story.info.source);
+    const comment = story.info.comment;
+    
+    return <li className={linkClass}>
+             {link}
+             <small>Disponível na {fullSource}</small>
+             {comment && <><br />
+                             <small className="story-comment">({comment})</small>
+                           </>}
+           </li>    
+  } else {
+    return <li className={linkClass}>
+             {link}
+             <small>Lançado em {story.launchDate.toLocaleDateString("pt-BR", {
+               year: "numeric",
+               month: "long",
+               day: "2-digit"
+             })}</small>
+           </li>
+  }
+  
 }
 
-
-export const BookDisplay = (props: { items: Book[] }) => {
+export const StoryListDisplay = (props: { items: Story[] }) => {
     return <ul className="story-display">
         {props.items.map(s => {
-            const key = s.name.toLowerCase().replace(" ", "");
-
-            return <li key={key}>
-                <a target="_blank" href={s.url.toString()}>{s.name}</a><br />
-                <small>Lançado em {s.launchDate.toLocaleDateString("pt-BR", {
-                    year: "numeric",
-                    month: "long",
-                    day: "2-digit"
-                })}</small>
-            </li>
+          const key = s.name.toLowerCase().replace(" ", "");
+          return <StoryDisplay item={s} key={key} />
         })}
     </ul>
 }

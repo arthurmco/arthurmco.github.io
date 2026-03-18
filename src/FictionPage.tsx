@@ -1,38 +1,40 @@
 import { Link } from 'react-router';
 import { MainLayout } from './layouts/MainLayout';
 import {
-    BookDisplay,
-    parseBook,
-    ShortStoryDisplay,
+    StoryListDisplay,
 } from './components/BookList'
 
 import {
-  type BookRaw,
-  type ShortStory
+  type RawBook,
+  type RawShortStory
 } from './model/Book.ts'
 
 import rawBookData from './books.json'
 import './FictionPage.css'
+import { StoryParser } from './model/Story.ts';
 
 const bookData = rawBookData as {
-  books: BookRaw[],
-  stories: ShortStory[]
+  books: RawBook[],
+  stories: RawShortStory[]
 }
 
 function FictionPage() {
-    return (
-        <MainLayout hideHeader={true} language='pt-br'>
+  const bookList = bookData.books.map(StoryParser.fromBook);
+  const shortStoryList = bookData.stories.map(StoryParser.fromShortStory);
+  
+  return (
+    <MainLayout hideHeader={true} language='pt-br'>
             <section>
                 <Link to="/">Voltar</Link>
             </section>
             <article>
               <section className='story-block' id="short-story-block">
                 <h2>Meus contos</h2>
-                <ShortStoryDisplay items={bookData.stories} />
+                <StoryListDisplay items={shortStoryList} />
               </section>
               <section className='story-block' id="book-block">
                 <h2>Meus livros</h2>
-                <BookDisplay items={bookData.books.map(parseBook)} />
+                <StoryListDisplay items={bookList} />
                 </section>
             </article>
         </MainLayout>

@@ -10,12 +10,12 @@ export interface RawStory {
     internal_time: InUniverseTimeInformation
 }
 
-export interface ShortStory extends RawStory {
+export interface RawShortStory extends RawStory {
     source: string;
     comment?: string;
 }
 
-export interface BookRaw extends RawStory {
+export interface RawBook extends RawStory {
     date: string;
 }
 
@@ -24,3 +24,4 @@ export type Book = {
     launchDate: Date;
     url: URL
 }
+

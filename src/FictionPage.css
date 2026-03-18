@@ -34,18 +34,18 @@ ul.story-display {
 }
 
 
-#short-story-block .story-display li>a {
+.story-display li.story-tag-shortstory>a {
     color: var(--red-light);
 }
 
-#short-story-block .story-display li>a:hover {
+.story-display li.story-tag-shortstory>a:hover {
     color: var(--red-dark);
 }
 
-#book-block .story-display li>a {
+.story-display li.story-tag-book>a {
     color: var(--green-light);
 }
 
-#book-block .story-display li>a:hover {
+.story-display li.story-tag-book>a:hover {
     color: var(--green-dark);
 }
