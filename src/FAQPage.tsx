@@ -75,9 +75,12 @@ function FAQPage() {
                         Isso significa que a maior parte das tecnologias apresentadas nas minhas obras é, em teoria, possível de existir.</p>
                     <p>Também escrevi um conto de terror (<em>Secretus</em>), e logo lançarei obras de alta e baixa fantasia</p>
                 </QuestionBlock>
-                <QuestionBlock title="Qual é a ordem pra ler as suas histórias?">
-                    <p>Por enquanto não há muitas, eu publiquei menos de dez histórias. Leia na ordem que você preferir.</p>
-                    <p>Lembrando que <em>Secretus</em> não faz parte do mesmo universo compartilhado que as outras obras.</p>
+              <QuestionBlock title="Qual é a ordem pra ler as suas histórias?">
+                <p>"Combustível" ou "Atualização de Software", se você quiser começar pelas mais elogiadas.</p>
+                <p>"O Último Oráculo", se você quiser ler algo mais espada e feitiçaria.</p>
+                <p>"Secretus", se você quer ler algo fora do universo principal (ele não faz parte do mesmo universo compartilhado que as outras obras).</p>
+                <p>Ou você pode pegar a publicada mais recente e ler. Em obras não numeradas (ou seja, sem um "Volume 1", "Volume 2", ou algo parecido), não faz diferença: há uma cronologia interna no meu universo literário, mas as obras podem ser lidas em qualquer ordem, isso não vai afetar a sua compreensão da história de maneira nenhuma.</p>
+                <p>As histórias estão disponíveis <Link to="/books">aqui</Link>.</p>
                 </QuestionBlock>
                 <QuestionBlock title="Universo literário? Então é tipo um <alguma coisa>CU?">
                     <p>Não. Provavelmente é melhor.</p>
@@ -85,9 +88,10 @@ function FAQPage() {
                 </QuestionBlock>
                 <QuestionBlock title="O que você acha de livros escritos com inteligência artificial?">
                     <p>Se você me conhece, certamente já sabe.</p>
-                    <p>Se não, aqui vai uma versão educada e polida da resposta.</p>
+                  <p>Se não, aqui vai uma versão educada e polida da resposta.</p>
+                  <p>Primeiro, uma coisa bem clara: <strong>eu uso IA no trabalho</strong>, porque a IA me auxilia como uma ferramenta, de mesma utilidade que o <i>autocomplete</i> da IDE, de uma <i>manpage</i>, ou mesmo de uma rápida pesquisa no Google. Mas isso é diferente de usá-la para escrever um livro, e tem um motivo:</p>
                     <p>Acredito que escrita seja uma arte, e que a arte é uma expressão individual do artista. Por pior que possa ser, cada artista tem um estilo, uma voz, uma personalidade única (porque as pessoas possuem vivências únicas), e a arte produzida por esses artistas também se torna única.</p>
-                    <p>A IA, mais especificamente os LLMs, como ChatGPT, Grok, MetaAI e afins, &ldquo;criam&rdquo; coisas diretamente baseadas em materiais pré-existentes, sem adicionar aquela personalidade do autor. Como resultado, sua obra se torna genérica, sem personalidade, e até uma parede mal rebocada tem mais personalidade que tal texto</p>
+                  <p>A IA, mais especificamente os LLMs, como ChatGPT, Grok, MetaAI e afins, &ldquo;criam&rdquo; coisas diretamente baseadas em materiais pré-existentes, sem adicionar aquela personalidade do autor. Como resultado, sua obra se torna genérica, sem personalidade, e até uma parede mal rebocada tem mais personalidade que tal texto. Comparando com minha declaração anterior, é como mandar o Word escrever um livro para você, em vez de ele te ajudar com a correção ortográfica</p>
                     <p>Fora isso, o uso de IA pra esse fim demonstra uma falta de respeito com a arte, e até mesmo com os artistas reais. Muitos artistas (e eu nem estou falando só de escrita) dependem de seus trabalhos para viverem. Se todos começarem a usar IA, com o tempo, os artistas se sentirão desmotivados e pararão de produzir, ou passarão fome e não terão como sustentar suas famílias. Como consequência, o mundo ficará cada vez mais genérico, mais afundado no desemprego e na pobreza, e com a inteligência artificial se retroalimentando para produzir coisas que são cada vez mais do mesmo.</p>
                     <p>Se eu usaria IA pra escrever um livro? Prefiro cortar meus braços e nunca mais escrever nada na vida.</p>
                 </QuestionBlock>
