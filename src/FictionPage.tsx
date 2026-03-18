@@ -27,7 +27,7 @@ function FictionPage() {
             <section>
                 <Link to="/">Voltar</Link>
             </section>
-            <article>
+            <article id="fiction-book-area">
               <section className='story-block' id="short-story-block">
                 <h2>Meus contos</h2>
                 <StoryListDisplay items={shortStoryList} />

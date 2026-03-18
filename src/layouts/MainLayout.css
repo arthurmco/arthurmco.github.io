@@ -28,8 +28,8 @@ header hr {
 
 #root>article {
     display: flex;
-    margin-left: 18%;
-    width: 64%;
+    margin-left: 15%;
+    width: 70%;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
@@ -37,9 +37,9 @@ header hr {
 
 footer {
     display: flex;
-    margin-left: 18%;
+    margin-left: 15%;
     margin-top: 3rem;
-    width: 64%;
+    width: 70%;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
@@ -99,8 +99,8 @@ main h1, main h2, main h3 {
     }
 
     #root>article {
-        width: 95%;
-        margin-left: 2.5%;
+        width: 92%;
+        margin-left: 4%;
     }
 
     footer {

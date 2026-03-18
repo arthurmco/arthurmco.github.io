@@ -33,6 +33,12 @@ ul.story-display {
     }
 }
 
+@media (min-width: 1280px) {
+    article#fiction-book-area {
+        width: 75%;
+    }
+}
+
 @media (min-width: 2500px) {
     .story-display li {
         max-width: 30%;
