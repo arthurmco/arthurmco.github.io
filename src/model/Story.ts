@@ -15,8 +15,49 @@ export type Story = {
     }
 }
 
+const extractSourceInfo = (source: string): [string, number] => {
+    if (source.startsWith("RLF Especial")) {
+        const sinfo = source.toLowerCase().split(" ");
+        return ["rlfe", parseInt(sinfo[2])]
+    }
+
+    if (source.startsWith("RLF") || source.startsWith("BF")) {
+        const sinfo = source.toLowerCase().split("vol.");
+        return [sinfo[0].trim(), parseInt(sinfo[1])]
+    }
+
+    if (source.startsWith("COF")) {
+        const sinfo = source.toLowerCase().split("v");
+        return [sinfo[0].trim(), parseInt(sinfo[1])]
+    }
+
+    return ["unknown", 0];
+}
+
+const anthologyMap: Record<string, Record<number, string>> = {
+    "rlf": {
+        13: "2026-03-13"
+    },
+    "rlfe": {},
+    "bf": {},
+    "cof": {}
+};
+
 function launchFromSource(source: string): Date {
-    return new Date();
+    const [anthology, volume] = extractSourceInfo(source);
+
+    if (!anthologyMap[anthology]) {
+        //console.error("no anthology data for " + source);
+        return new Date();
+    }
+
+    const dstr = anthologyMap[anthology][volume];
+    if (!dstr) {
+        //console.warn("unknown date for " + source);
+        return new Date();
+    }
+
+    return new Date(dstr);
 }
 
 function makeInternalDate(year: number, month: number | undefined) {

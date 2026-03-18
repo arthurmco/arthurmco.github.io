@@ -14,7 +14,7 @@ const PipeSeparatedLinks = () => {
   return (
               <section className='pipe-links'>
                 {links.map(([text, linkTo]) => ((
-                  <span><Link to={linkTo || "/"}>{text}</Link></span>
+                  <span key={linkTo}><Link to={linkTo || "/"}>{text}</Link></span>
                 )))}
               </section>
   )
