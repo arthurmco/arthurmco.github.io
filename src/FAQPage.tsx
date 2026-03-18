@@ -76,10 +76,10 @@ function FAQPage() {
                     <p>Também escrevi um conto de terror (<em>Secretus</em>), e logo lançarei obras de alta e baixa fantasia</p>
                 </QuestionBlock>
               <QuestionBlock title="Qual é a ordem pra ler as suas histórias?">
-                <p>"Vida Invisível", "Combustível" ou "Atualização de Software", se você quiser começar pelas mais elogiadas. A primeira, inclusive, está numa antologia vencedora de um prêmio.</p>
-                <p>"O Último Oráculo", se você quiser ler algo mais espada e feitiçaria.</p>
-                <p>"Secretus", se você quer ler algo fora do universo principal (ele não faz parte do mesmo universo compartilhado que as outras obras).</p>
-                <p>Ou você pode pegar a publicada mais recente e ler. Em obras não numeradas (ou seja, sem um "Volume 1", "Volume 2", ou algo parecido), não faz diferença: há uma cronologia interna no meu universo literário, mas as obras podem ser lidas em qualquer ordem, isso não vai afetar a sua compreensão da história de maneira nenhuma.</p>
+                <p><strong>Vida Invisível</strong>, <strong>Combustível</strong> ou <strong>Atualização de Software</strong>, se você quiser começar pelas mais elogiadas. A primeira, inclusive, está numa antologia vencedora de um prêmio.</p>
+                <p><strong>O Último Oráculo</strong>, se você gostar de espada e feitiçaria.</p>
+                <p><strong title="A única obra que se passa num universo isolado">Secretus</strong>, se você gostar de terror.</p>
+                <p>Ou você pode pegar a publicada mais recente e ler. Em obras não numeradas (ou seja, sem um "Volume 1", "Volume 2", ou algo parecido), não faz diferença: há uma cronologia interna no meu universo literário, mas as obras podem ser lidas em qualquer ordem, isso não vai afetar a sua compreensão da história de maneira nenhuma. E, em obras numeradas, é só começar pela "1", e você também não precisa ter lido nenhuma outra história minha</p>
                 <p>As histórias estão disponíveis <Link to="/books">aqui</Link>.</p>
                 </QuestionBlock>
                 <QuestionBlock title="Universo literário? Então é tipo um <alguma coisa>CU?">
