@@ -2,7 +2,8 @@ import {
     faBook,
     faLaptop,
     faPenNib,
-    faPlay
+    faPlay,
+    type IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './HomeLinksArea.css';
@@ -11,7 +12,7 @@ import { Link } from 'react-router';
 
 export interface HomeLinkInfo {
     title: string;
-    icon: any;
+    icon: IconDefinition;
     description: string;
     url: string | ((props: PropsWithChildren<{}>) => JSX.Element);
     iconMargin: number;
