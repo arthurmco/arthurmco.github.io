@@ -30,7 +30,7 @@ export const StoryItem = (props: { itemkey: string, item: StoryInfo }) => {
     const readTime = `${readMinutes} minuto${readMinutes > 1 ? "s" : ""}`;
 
     return (
-        <li>
+      <li style={{marginBottom: "0.5em"}}>
             <Link to={`/microstory/${itemkey}`}>
                 {item.name}
             </Link><br />Cerca de {readTime} de leitura
@@ -79,9 +79,15 @@ export const StorySummary = (props: { item: StoryInfo }) => {
 
 export const MicroStoryList = (props: { stories: Record<string, RawStoryInfo> }) => {
 
-    const storiesData = Object.entries(props.stories);
+  const storiesData = Object.entries(props.stories)
+  storiesData.sort((i0, i1) => {
+    const i0D = new Date(i0[1].lastModified);
+    const i1D = new Date(i1[1].lastModified);
+    
+    return i1D.getTime() - i0D.getTime();
+  });
 
-    return (<ul>
+    return (<ul className="microstory-list">
         {storiesData.map(([itemkey, item]) => (
             (<StoryItem {...{ key: itemkey, itemkey, item: parseStoryInfo(item) }} />)))}
     </ul>

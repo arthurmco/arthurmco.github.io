@@ -1,8 +1,16 @@
 {
-    "favors": {
-        "name": "Vagantes: Troca de Favores",
-        "readSecs": 356,
-        "created": "2025-05-05T22:49:13-03:00",
-        "lastModified": "2025-05-05T23:43:13-03:00"
-    }    
+  "favors": {
+    "name": "Vagantes: Troca de Favores",
+    "readSecs": 356,
+    "created": "2025-05-05T22:49:13-03:00",
+    "lastModified": "2025-05-05T23:43:13-03:00",
+    "year": 2448
+  },
+  "datatransfer": {
+    "name": "Transferência de dados",
+    "readSecs": 438,
+    "created": "2026-06-22T02:41:02-03:00",
+    "lastModified": "2026-06-22T02:41:02-03:00",
+    "year": 2310
+  }
 }

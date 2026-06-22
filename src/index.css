@@ -35,12 +35,12 @@
 
 a {
     font-weight: 500;
-    color: var(--blue-dark);
+    color: var(--blue-light);
     text-decoration: underline dotted;
     -webkit-text-decoration: underline dotted;    
 }
 a:hover {
-    color: var(--blue-light);
+    color: var(--blue-dark);
 }
 
 body {
