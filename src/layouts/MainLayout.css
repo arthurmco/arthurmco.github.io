@@ -28,8 +28,8 @@ header hr {
 
 #root>article {
     display: flex;
-    margin-left: 15%;
-    width: 70%;
+    margin-left: 10%;
+    width: 80%;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
