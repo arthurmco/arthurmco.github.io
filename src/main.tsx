@@ -26,3 +26,7 @@ createRoot(document.getElementById('root')!).render(
     </HashRouter>
   </StrictMode>,
 )
+
+/* Note: remember to remove the :note attribute, and the clobberPrefix on the
+ * MicrostoryPage.tex when migrating to a real site infrastructure!
+ */

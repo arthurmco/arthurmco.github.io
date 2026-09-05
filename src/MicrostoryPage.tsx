@@ -4,6 +4,10 @@ import _storyFiles from './stories/files.json'
 
 import { Base64 } from 'js-base64';
 import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypeSlug from 'rehype-slug';
+import { HashLink } from 'react-router-hash-link';
+import { useLocation } from 'react-router-dom';
 import pako from 'pako'
 
 import './MicrostoryPage.css'
@@ -18,54 +22,76 @@ import {
 import remarkFlexibleContainers from 'remark-flexible-containers'
 
 const retrieveStory = (storyName: string): string => {
-    const storyData = storyFiles[storyName];
+  const storyData = storyFiles[storyName];
 
-    if (!storyData) {
-        throw new Error("Short story not found")
-    }
+  if (!storyData) {
+    throw new Error("Short story not found")
+  }
 
-    const rawContent = Base64.toUint8Array(storyData.join(""))
-    return new TextDecoder().decode(pako.ungzip(rawContent))
+  const rawContent = Base64.toUint8Array(storyData.join(""))
+  return new TextDecoder().decode(pako.ungzip(rawContent))
+}
+
+
+function MarkdownAnchorHashRouterFixer({ href = '', children, ...props }) {
+  const { pathname } = useLocation();
+  if (href.startsWith('#')) {
+    return <HashLink to={`${pathname}${href}`} {...props}>{children}</HashLink>;
+  }
+  return <a href={href} {...props}>{children}</a>;
 }
 
 
 function MicrostoryPage() {
 
-    const returnSection = (<section>
-        <Link to="/microstories">Voltar</Link>
+  const returnSection = (
+    <section>
+      <Link to="/microstories">Voltar</Link>
     </section>
+  )
+
+  const { storyName } = useParams();
+
+  
+  try {
+    const data = retrieveStory(storyName || "")
+    const story = (storyList as Record<string, RawStoryInfo>)[storyName || ""];
+
+    return (
+      <MainLayout hideHeader={true} language='pt-br'>
+        {returnSection}
+        <main className="story">
+          <h1>{story.name}</h1>
+          <StorySummary item={parseStoryInfo(story)} />
+          <Markdown remarkPlugins={
+            [
+              remarkFlexibleContainers,
+              remarkGfm,
+            ]}
+
+            rehypePlugins={[rehypeSlug]}
+            components={{a: MarkdownAnchorHashRouterFixer}}
+            remarkRehypeOptions={{
+              footnoteLabel: "Notas de rodapé"
+            }}
+          >
+            {data}
+          </Markdown>
+        </main>
+      </MainLayout>
     )
 
-    const { storyName } = useParams();
+  } catch (e) {
+    return (
+      <MainLayout hideHeader={true} language='pt-br'>
+        {returnSection}
+        <main>
+                ERRO: {(e as Error).message}
+        </main>
+      </MainLayout>
+    )
 
-    try {
-        const data = retrieveStory(storyName || "")
-        const story = (storyList as Record<string, RawStoryInfo>)[storyName || ""];
-
-        return (
-            <MainLayout hideHeader={true} language='pt-br'>
-                {returnSection}
-                <main className="story">
-                    <h1>{story.name}</h1>
-                    <StorySummary item={parseStoryInfo(story)} />
-                    <Markdown remarkPlugins={[remarkFlexibleContainers]}>
-                        {data}
-                    </Markdown>
-                </main>
-            </MainLayout>
-        )
-
-    } catch (e) {
-        return (
-            <MainLayout hideHeader={true} language='pt-br'>
-                {returnSection}
-                <main>
-                    ERRO: {(e as Error).message}
-                </main>
-            </MainLayout>
-        )
-
-    }
+  }
 
 }
 
