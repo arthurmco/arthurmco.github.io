@@ -3,7 +3,7 @@ import { MainLayout } from './layouts/MainLayout';
 import _storyFiles from './stories/files.json'
 
 import { Base64 } from 'js-base64';
-import Markdown, { type Components, type ExtraProps } from 'react-markdown'
+import Markdown, { type ExtraProps } from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug';
 import { HashLink } from 'react-router-hash-link';
